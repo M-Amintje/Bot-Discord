@@ -28,7 +28,7 @@ jsfile.forEach((f, i) =>{
       const events = require(`./events/${f}`);
       const event = f.split(".")[0];
  
-      client.on(event, events.bind(null, client));
+      bot.on(event, events.bind(null, bot));
     });
   });
  
