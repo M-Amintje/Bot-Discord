@@ -22,12 +22,11 @@ jsfile.forEach((f, i) =>{
  
   fs.readdir("./events/", (error, f) => {
     if (error) console.log(error);
-    console.log(`${f.length} events en chargement`);
+    console.log(`events en chargement`);
  
     f.forEach((f) => {
       const events = require(`./events/${f}`);
       const event = f.split(".")[0];
- 
       bot.on(event, events.bind(null, bot));
     });
   });
